@@ -113,12 +113,16 @@ allowing Lightbox to use the ``title`` attribute for the image caption.
 
 Upgrade Wishlist
 -------------------
-The three major upgrades I'd like to see are:
+The three major upgrades I'd personally like are:
 
-1. Automatic copying of the required files and header metadata
+1. Automatic copying of the required files and header metadata.  This plugin 
+(and most others) should work with any theme and not require the user to 
+manually copy files.
 2. Ability to choose between alternate Lightbox-like implementations (e.g.:
 `Slim-box`_, Colorbox_, or a `pure`_ `CSS3`_ `version`_ ?)
 3. Implement automatic resizing or ability to link to another image.
+4. Implement a more generic modal box, i.e. include support for videos, links,
+etc.
 
 I won't be getting to them anytime soon.  I started on #1, but my pelican- /
 python-fu is weak so I haven't yet figured it out.  If someone else would like
