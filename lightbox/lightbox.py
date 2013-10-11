@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 def wrap_image_tags(p):
     """ Wrap image tags in links to add Lightbox support
 
-    Any image tag in the content with class={LBPREFIX}-{GALLERYNAME} will be
+    Any image tag in the content with class={LBPREFIX}-{SETNAME} will be
     wrapped with an anchored href with Lightbox support.  `LBPREFIX` is defined
     in the settings file as `LIGHTBOX_PREFIX` with a default of `'lb-'`.
 
@@ -23,14 +23,14 @@ def wrap_image_tags(p):
     """
 
     lbprefix = p.settings.get('LIGHTBOX_PREFIX', 'lb-')
-    lbgallery = p.settings.get('LIGHTBOX_GALLERY', 'images')
+    lbset = p.settings.get('LIGHTBOX_SET', 'images')
 
     if p._content is not None:
         content = p._content
         soup = BeautifulSoup(content)
 
         # Wrap each image tag in an anchor with a link.  Add the
-        # attribute for the lightbox gallery to activate.
+        # attribute for the lightbox set to activate.
         if 'img' in content:
             for tag in soup('img'):
 
